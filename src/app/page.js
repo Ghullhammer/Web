@@ -1,103 +1,108 @@
-import Image from "next/image";
+"use client"
+
+import { useState } from "react";
+import styles from "./page.css";
+import MainHeader from "../components/MainHeader";
+import Modal from "../components/Modal";
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+
+const [modalInfo, setModalInfo] = useState({ isOpen: false, title: "", content: "" });
+
+    const openModal = (title, content, e) => {
+        e.preventDefault();
+      setModalInfo({ isOpen: true, title, content });
+    };
+  
+    const closeModal = () => {
+      setModalInfo({ ...modalInfo, isOpen: false });
+    };
+
+
+  return (
+    <>
+    
+        <MainHeader/>
+      
+      <main>
+          <section>
+              <h2>Типи</h2>
+              <a>Художня література</a>
+              <ul>
+                  <li><a href="#">Романи</a></li>
+                  <li><a href="#">Повісті</a></li>
+                  <li><a href="#">Оповідання</a></li>
+              </ul>
+              <a>Документальна література</a>
+              <ul>
+                  <li><a href="#">Природничі науки</a></li>
+                  <li><a href="#">Технічні науки</a></li>
+                  <li><a href="#">Соціальні науки</a></li>
+              </ul>
+              <div>
+                  <input type="text" value="Пошук"/>
+                  <button type="submit">→</button>
+              </div>
+          </section>
+          
+
+          <section>
+              <h2>Нові надходження</h2>
+              <ul>
+                  <li><a href="#">Шантарам — Грегорі Девід Робертс</a></li>
+                  <li><a href="#">Сила звички — Чарльз Дахігг</a></li>
+                  <li><a href="#">Таємничий острів — Жуль Верн</a></li>
+              </ul>
+          </section>
+
+
+          <section>
+              <h2>Популярні книги</h2>
+              <ul>
+                  <li><a href="#">Гаррі Поттер і філософський камінь — Джоан Роулінг</a></li>
+                  <li><a href="#">1984 — Джордж Орвелл</a></li>
+                  <li><a href="#">Майстер і Маргарита — Михайло Булгаков</a></li>
+              </ul>
+          </section>
+
+          <section>
+              <h2>Цитата дня</h2>
+              <blockquote>«Книга — це мрія, яку ти тримаєш у руках.» — Ніл Гейман</blockquote>
+          </section>
+
+          <section>
+              <h2>Підпишіться на новини</h2>
+              <form>
+                  <input type="email" placeholder="Введіть ваш email"/>
+                  <button type="submit">Підписатися</button>
+              </form>
+          </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      
+            <footer>
+        <div>
+          <li><a href="#" onClick={(e) => openModal("Про нас", "Компанія, що створює найкращу онлайн-бібліотеку.", e)}>Про нас</a></li>
+          <li><a href="#" onClick={(e) => openModal("Контакти", "Напишіть нам на email: info@library.ua або зателефонуйте: +380 44 123 4567", e)}>Контакти</a></li>
+          <li><a href="#" onClick={(e) => openModal("Умови використання", "Всі матеріали доступні лише для особистого використання.", e)}>Умови використання</a></li>
+          <li><a href="#" onClick={(e) => openModal("Історія", "Наша бібліотека була створена у 2020 році та продовжує розвиватися.", e)}>Історія</a></li>
+        </div>
+        <div>
+          <h4>Статистика:</h4>
+          <li>Збережено: 3 файлів</li>
+          <li>Щоденних відвідувачів: 20</li>
+        </div>
       </footer>
-    </div>
+
+      {modalInfo.isOpen && (
+        <Modal
+          title={modalInfo.title}
+          content={modalInfo.content}
+          onClose={closeModal}
+        />
+      )}
+      
+    </>
   );
 }

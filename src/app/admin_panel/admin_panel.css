@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background: #0056b3;
+}
+
+.admin-panel {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.admin-panel h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.admin-panel input, .admin-panel select, .admin-panel button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.admin-panel button {
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-panel button:hover {
+    background: #218838;
+}
+
+.user-list, .document-list {
+    list-style: none;
+    padding: 0;
+}
+
+.user-list li, .document-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background: #f1f1f1;
+}
+
+.user-list button, .document-list button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.user-list button:hover, .document-list button:hover {
+    background: #c82333;
+}
+
+.menuSelect{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-around;
+    padding: 5px 5px;
+    flex-wrap: wrap;
+    
+    
+}
+
+.documentsList {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 5px;
+}
+.usersList{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 5px;
+
+}
+#adminPanel {
+    text-align: center;
+}
+
+.usersList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background: #f1f1f1;
+}
+.documentsList li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background: #f1f1f1;
+}
+
+.usersList li button, .documentsList li button {
+    margin-left: auto;
+}
+
+.uploadContainer {
+    max-width: 300px;
+    
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+.uploadContainer h3 {
+    margin-bottom: 15px;
+}
+.uploadContainer input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.uploadContainer button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.uploadContainer button:hover {
+    background: #0056b3;
+}

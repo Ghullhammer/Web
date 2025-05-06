@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #343a40;
+    border-bottom: 2px solid #343a40;
+    padding-bottom: 5px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+
+blockquote {
+    font-style: italic;
+    background: #e9ecef;
+    padding: 10px;
+    border-left: 5px solid #343a40;
+}
+
+form input[type="email"],
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+footer div {
+    margin-bottom: 10px;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer li a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+footer li a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для каталога */
+#searchInput, #categoryFilter {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 5px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+#documentList {
+    padding: 0;
+    list-style: none;
+}
+
+#documentList li {
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#documentList h3 {
+    margin: 0;
+    color: #343a40;
+}
+
+#documentList img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#documentList button {
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#groupList{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 5px 5px;
+}
+#catList {
+    width: 600px;
+    background: white;
+    padding: 15px 15px;
+    margin: 5px 0px 15px 5px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+li img{
+    width: 200px;
+    height: 200px;
+}
+
+
+.book-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.comment-section {
+    margin-top: 10px;
+}
+
+.comment-list {
+    list-style-type: disc;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.book-description {
+    white-space: normal;
+    word-wrap: break-word;
+}
