@@ -34,7 +34,9 @@ model Session {
 }
 
 model Document {
-  id       Int       @id @default(autoincrement())
-  name    String
-  link    String?
+  id        Int      @id @default(autoincrement())
+  name      String  @unique
+  author String?
+  description String?
+  downloadLink String?
 }
